@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styles: []
 })
 export class BuscarComponent implements OnInit {
+  p: number = 1;
   buscar: string = '';
   arregloEmpleados: any[] = [];
   palabra: any;

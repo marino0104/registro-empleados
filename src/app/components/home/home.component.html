@@ -1,0 +1,21 @@
+<div class="row mb-5">
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Salario</th>
+                <th scope="col">Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empleador of listaEmpleados | paginate:{itemsPerPage:12, currentPage: p}">
+                <th scope="row">{{empleador.id}}</th>
+                <td>{{empleador.employee_name}}</td>
+                <td>{{empleador.employee_salary}}</td>
+                <td>{{empleador.employee_age}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event" class="text-right pt-3 col-md-12"></pagination-controls>
+</div>
